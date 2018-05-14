@@ -18,4 +18,19 @@ router.route('/')
     })
   })
   
+  router.route('/')
+  .post((req, res) => {
+    let searchName = req.body.name;
+    let marvelResponse = getResponse(searchName);
+    axios.get(`${marvelResponse}`)
+    
+    .then(result => {
+      return res.json(result.data)
+    })
+    .catch(err => {
+      console.log({err: err.message})
+      return res.json({err: err.message})
+    })
+  })
+
   module.exports = router;
