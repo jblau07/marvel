@@ -11,16 +11,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 
 app.use('/api/hero', heroRoute);
 
-// app.get('/', (req, res) => {
-//   res.send('smoke test');
-// });
-
-// app.get('/api', (req, res) => {
-//   axios.get(`https://gateway.marvel.com:443/v1/public/characters?name=spider-man&apikey=920f1b66bb927430958fba8381a26255}`)
-//     .then(result => {
-//       return res.send('hit')
-//     })
-// })
+app.get('/', (req, res) => {
+  res.send('smoke test');
+});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on ${PORT} `)
