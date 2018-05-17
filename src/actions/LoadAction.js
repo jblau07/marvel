@@ -1,4 +1,5 @@
 import axios from 'axios';
+export const LOAD_HERO = 'LOAD_HERO';
 
 export const loadHero = (hero) => {
   return dispatch => {
