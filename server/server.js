@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8082;
 
 const heroRoute = require('./routes/hero')
 
